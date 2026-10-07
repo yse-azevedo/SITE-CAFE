@@ -7,7 +7,6 @@
     padding: 0%;
 }
 
-
 ul{
     list-style: none;
     
@@ -24,12 +23,14 @@ button{
 }
 
 img{
-    width: 75%;
+    width: 85%;
+    margin-left: 20%;
 }
 
-
-
 header {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
     background-color: #c4a482;  
 }
 
@@ -42,13 +43,38 @@ header .navbar{
 }
 .navbar .nav-logo .logo-texto{
     color: white;
+    font-size: small;
+    
 }
 
 .navbar .nav-menu{
     display: flex;
-    gap: 10px;
+    gap: 20px;
+    padding: 0px 10px;
 }
 .navbar .nav-menu .nav-link{
-    padding: 10px 10px ;
+    color: rgb(97, 55, 55);
+    font-size: 95%;   
+    font-family: "Poppins", sans-serif;
+    margin-right: 25px;
+}
+    
+    
+.navbar .nav-menu .nav-link:hover{
+    text-decoration: underline;
+    
+}
+
+.h-section{
+    min-height: 100vh;
+    background-color: #c4a482;
+    
+}
+.h-section .section-conteiner{
+    display:flex;
+    align-items: center;
+    min-height: 100vh;
     color: white;
+    justify-content: space-between;
+    
 }
