@@ -585,3 +585,245 @@ header .navbar {
         padding: 14px 8px;
     }
 }
+
+/* ===== LISTAS ===== */
+.informacoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+    padding: 70px 8%;
+    background-color: var(--creme);
+}
+
+.lista-produtos,
+.passos {
+    background-color: var(--branco);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(74, 38, 25, 0.08);
+}
+
+.informacoes h2 {
+    color: var(--marrom);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.informacoes ul,
+.informacoes ol {
+    padding-left: 25px;
+    color: #65554b;
+    line-height: 2.2;
+}
+
+.informacoes li {
+    padding-left: 5px;
+}
+.informacoes ul {
+    list-style: disc;
+}
+
+.informacoes ol {
+    list-style: decimal;
+}
+
+/* ===== TABELA DE PREÇOS ===== */
+.tabela-menu {
+    padding: 70px 8%;
+    background-color: var(--branco);
+    text-align: center;
+}
+
+.tabela-menu h2 {
+    color: var(--marrom);
+    font-size: clamp(26px, 4vw, 36px);
+    margin-bottom: 30px;
+}
+
+.tabela-menu table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(74, 38, 25, 0.08);
+}
+
+.tabela-menu th {
+    background-color: var(--marrom);
+    color: var(--branco);
+    padding: 16px;
+    text-align: left;
+}
+
+.tabela-menu td {
+    padding: 15px 16px;
+    color: #65554b;
+    text-align: left;
+    border-bottom: 1px solid #eadfd3;
+}
+
+.tabela-menu tbody tr:nth-child(even) {
+    background-color: var(--creme);
+}
+
+.tabela-menu tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ===== FORMULÁRIO DE CONTATO ===== */
+.contato-section {
+    padding: 70px 8%;
+    background-color: var(--creme);
+    text-align: center;
+}
+
+.contato-section h2 {
+    color: var(--marrom);
+    font-size: clamp(28px, 4vw, 38px);
+    margin-bottom: 12px;
+}
+
+.contato-section > p {
+    color: #65554b;
+    margin-bottom: 30px;
+}
+
+.contato-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--branco);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(74, 38, 25, 0.08);
+    text-align: left;
+}
+
+.contato-section form div {
+    margin-bottom: 20px;
+}
+
+.contato-section label {
+    display: block;
+    color: var(--marrom);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.contato-section input[type="text"],
+.contato-section input[type="email"],
+.contato-section textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d9c4b0;
+    border-radius: 8px;
+    background-color: white;
+    color: var(--marrom);
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contato-section textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contato-section input:focus,
+.contato-section textarea:focus {
+    border-color: var(--caramelo);
+    box-shadow: 0 0 0 3px rgba(184, 121, 76, 0.15);
+}
+
+.contato-section button[type="submit"] {
+    width: 100%;
+    padding: 14px 20px;
+    background-color: var(--marrom);
+    color: var(--branco);
+    border: none;
+    border-radius: 30px;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contato-section button[type="submit"]:hover {
+    background-color: var(--caramelo);
+    transform: translateY(-2px);
+}
+
+
+/* ===== LINK EXTERNO ===== */
+main > p {
+    padding: 20px 8%;
+    text-align: center;
+    color: #65554b;
+    background-color: var(--branco);
+}
+
+main > p a {
+    color: #8c512f;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+main > p a:hover {
+    color: var(--marrom);
+}
+
+
+/* ===== RODAPÉ ===== */
+.rodape {
+    padding: 30px 8%;
+    background-color: var(--marrom);
+    color: var(--creme);
+    text-align: center;
+}
+
+.rodape p {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 700px) {
+    .informacoes {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 45px 5%;
+    }
+
+    .lista-produtos,
+    .passos {
+        padding: 24px;
+    }
+
+    .tabela-menu {
+        padding: 45px 5%;
+        overflow-x: auto;
+    }
+
+    .tabela-menu table {
+        min-width: 480px;
+    }
+
+    .contato-section {
+        padding: 45px 5%;
+    }
+
+    .contato-section form {
+        padding: 22px;
+    }
+
+    .rodape {
+        padding: 25px 5%;
+    }
+}
